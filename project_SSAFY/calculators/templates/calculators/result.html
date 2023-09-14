@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>계산결과</h1>
+    <br>
+    <p>{{first}} + {{second}} = {{first|add:second}}</p>
+    <p>{{first}} + {{second}} = {{times}}</p>
+    <p>{{first}} - {{second}} = {{minus}}</p>
+    {% if second == 0 %}
+    <p>계산할 수 없습니다</p>
+    {% else %}
+    <p>{{first}} / {{second}} = {{divide}}</p>
+    {% endif %}
+{% endblock content %}
